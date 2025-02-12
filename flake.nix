@@ -40,5 +40,6 @@
 	in { packages = rec {
 		default = fourmolu;
 		fourmolu =  flake.packages."fourmolu:exe:fourmolu";
+		fourmolu18 = pkgs.writeShellScriptBin "fourmolu18" "${fourmolu}/bin/fourmolu $@";
 	}; });
 }
